@@ -20,37 +20,36 @@ export const fetchData = () => (dispatch) => {
         url: 'http://localhost:4000/balance'
     })
     .then(({data}) => {
+        // console.log(data[0])
         dispatch({
             type: 'FETCH_DATA',
-            payload: data
+            payload: data[0]
         })
     })
     .catch(err => console.log(err))
 }
 
 
-export const addIncome = (income) => (dispatch) => {
+export const addIncome = ({income, id}) => (dispatch) => {
+    // console.log(income)
     axios({
         method: 'PATCH',
         url: 'http://localhost:4000/income',
-        data: income
-    })
-    .then(({data}) => {
-        // dispatch({
-        //     type: 'FETCH_DATA'
-        // })
+        data: {
+            id,
+            income
+        }
     })
 }
 
-export const addExpenses = (expenses) => (dispatch) => {
+export const addExpenses = ({expenses, id}) => (dispatch) => {
     axios({
         method: 'PATCH',
         url: 'http://localhost:4000/expenses',
-        data: expenses
+        data: {
+            id,
+            expenses
+        }
     })
-    .then(({data}) => {
-        // dispatch({
-        //     type: 'FETCH_DATA'
-        // })
-    })
+  
 }

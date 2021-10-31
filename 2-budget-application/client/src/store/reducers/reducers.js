@@ -2,7 +2,11 @@ const initialState = {
     // balance: 0,
     // income: 0,
     // expenses: 0
-    data: []
+    data: {
+        balance: 0,
+        income: 0,
+        expenses: 0
+    }
 }
 
 
