@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <h1>BUDGET APP SIMPLIFIED</h1>
       <HomePage/>
     </div>
   )
