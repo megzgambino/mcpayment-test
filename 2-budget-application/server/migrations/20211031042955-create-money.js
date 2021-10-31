@@ -11,6 +11,12 @@ module.exports = {
       balance: {
         type: Sequelize.INTEGER
       },
+      income: {
+        type: Sequelize.INTEGER
+      },
+      expenses: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

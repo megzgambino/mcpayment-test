@@ -21,7 +21,23 @@ module.exports = (sequelize, DataTypes) => {
         min: 0,
         isDecimal: false,
       }
-    }
+    },
+    income: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isInt: true,
+        min: 0,
+        isDecimal: false,
+      }
+    },
+    expenses: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isInt: true,
+        min: 0,
+        isDecimal: false,
+      }
+    },
   }, {
     sequelize,
     modelName: 'Money',
